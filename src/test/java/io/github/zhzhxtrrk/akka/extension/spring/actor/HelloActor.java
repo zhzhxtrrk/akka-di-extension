@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Scope;
 import akka.actor.AbstractLoggingActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
-import io.gitlab.zhzhxtrrk.akka.extension.spring.SpringExtension;
+import io.github.zhzhxtrrk.akka.extension.spring.SpringExtension;
 
 /**
  * HelloActor

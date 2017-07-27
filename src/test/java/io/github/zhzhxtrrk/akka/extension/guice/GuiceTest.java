@@ -13,7 +13,6 @@ import com.google.inject.Injector;
 
 import io.github.zhzhxtrrk.akka.extension.guice.actor.HelloActor;
 import io.github.zhzhxtrrk.akka.extension.guice.actor.Module;
-import io.gitlab.zhzhxtrrk.akka.extension.guice.GuiceExtension;
 
 /**
  * GuiceTest

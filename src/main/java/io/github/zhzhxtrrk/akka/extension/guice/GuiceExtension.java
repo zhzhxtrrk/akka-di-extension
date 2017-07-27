@@ -1,4 +1,4 @@
-package io.gitlab.zhzhxtrrk.akka.extension.guice;
+package io.github.zhzhxtrrk.akka.extension.guice;
 
 import akka.actor.*;
 

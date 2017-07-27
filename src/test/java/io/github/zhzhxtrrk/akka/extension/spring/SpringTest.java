@@ -10,7 +10,6 @@ import akka.actor.ActorSystem;
 import akka.actor.Props;
 import akka.testkit.javadsl.TestKit;
 import io.github.zhzhxtrrk.akka.extension.spring.actor.HelloActor;
-import io.gitlab.zhzhxtrrk.akka.extension.spring.SpringExtension;
 
 /**
  * GuiceTest

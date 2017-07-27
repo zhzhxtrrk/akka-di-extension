@@ -1,4 +1,4 @@
-package io.gitlab.zhzhxtrrk.akka.extension.spring;
+package io.github.zhzhxtrrk.akka.extension.spring;
 
 import org.springframework.beans.factory.BeanFactory;
 

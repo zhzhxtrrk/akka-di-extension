@@ -3,7 +3,7 @@ package io.github.zhzhxtrrk.akka.extension.guice.actor;
 import akka.actor.AbstractLoggingActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
-import io.gitlab.zhzhxtrrk.akka.extension.guice.GuiceExtension;
+import io.github.zhzhxtrrk.akka.extension.guice.GuiceExtension;
 
 /**
  * HelloActor
