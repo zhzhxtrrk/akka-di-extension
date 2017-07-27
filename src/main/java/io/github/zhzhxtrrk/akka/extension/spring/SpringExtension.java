@@ -25,9 +25,18 @@ public class SpringExtension extends AbstractExtensionId<SpringExtensionImpl> im
         return context.actorOf(INSTANCE.get(context.getSystem()).props(actorClazz));
     }
 
+    public static ActorRef actorOf(ActorSystem system, Class<? extends Actor> actorClazz) {
+        return system.actorOf(INSTANCE.get(system).props(actorClazz));
+    }
+
     public static ActorRef actorOf(AbstractActor.ActorContext context, String beanName,
                                    Class<? extends Actor> actorClazz) {
         return context.actorOf(INSTANCE.get(context.getSystem()).props(beanName, actorClazz));
+    }
+
+    public static ActorRef actorOf(ActorSystem system, String beanName,
+                                   Class<? extends Actor> actorClazz) {
+        return system.actorOf(INSTANCE.get(system).props(beanName, actorClazz));
     }
 
     @Override

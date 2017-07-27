@@ -25,6 +25,10 @@ public class GuiceExtension extends AbstractExtensionId<GuiceExtensionImpl> impl
         return context.actorOf(INSTANCE.get(context.getSystem()).props(actorClazz));
     }
 
+    public static ActorRef actorOf(ActorSystem system, Class<? extends Actor> actorClazz) {
+        return system.actorOf(INSTANCE.get(system).props(actorClazz));
+    }
+
     @Override
     public GuiceExtensionImpl createExtension(ExtendedActorSystem system) {
         return new GuiceExtensionImpl(injector);
