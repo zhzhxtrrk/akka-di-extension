@@ -1,4 +1,4 @@
-package io.github.zhzhxtrrk.akka.extension.guice.actor;
+package io.github.zhzhxtrrk.akka.extension.guice;
 
 import com.google.inject.AbstractModule;
 

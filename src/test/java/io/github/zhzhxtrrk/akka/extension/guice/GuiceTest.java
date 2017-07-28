@@ -12,7 +12,6 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 import io.github.zhzhxtrrk.akka.extension.guice.actor.HelloActor;
-import io.github.zhzhxtrrk.akka.extension.guice.actor.Module;
 
 /**
  * GuiceTest
