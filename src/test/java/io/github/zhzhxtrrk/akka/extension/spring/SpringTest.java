@@ -3,8 +3,12 @@ package io.github.zhzhxtrrk.akka.extension.spring;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import akka.actor.ActorSystem;
 import akka.actor.Props;
@@ -17,7 +21,9 @@ import io.github.zhzhxtrrk.akka.extension.spring.actor.HelloActor;
  * @author Zhe ZHANG
  * @version GuiceTest, v1.0 2017/7/27 11:13
  */
-public class SpringTest {
+@RunWith(SpringRunner.class)
+@ContextConfiguration(classes = { TestConfiguration.class })
+public class SpringTest implements ApplicationContextAware {
 
     private static ActorSystem system;
 
@@ -31,13 +37,13 @@ public class SpringTest {
         TestKit.shutdownActorSystem(system);
     }
 
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        SpringExtension.initialize(applicationContext);
+    }
+
     @Test
     public void test() {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(
-            "io.github.zhzhxtrrk.akka.extension.spring",
-            "io.github.zhzhxtrrk.akka.extension.service");
-        SpringExtension.initialize(applicationContext);
-
         new TestKit(system) {
             {
                 this.childActorOf(Props.create(HelloActor.class));
@@ -45,4 +51,5 @@ public class SpringTest {
             }
         };
     }
+
 }

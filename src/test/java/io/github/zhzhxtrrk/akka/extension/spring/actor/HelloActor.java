@@ -2,8 +2,6 @@ package io.github.zhzhxtrrk.akka.extension.spring.actor;
 
 import javax.inject.Named;
 
-import org.springframework.context.annotation.Scope;
-
 import akka.actor.AbstractLoggingActor;
 import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
@@ -16,7 +14,6 @@ import io.github.zhzhxtrrk.akka.extension.spring.SpringExtension;
  * @version HelloActor, v1.0 2017/7/27 0:04
  */
 @Named
-@Scope("prototype")
 public class HelloActor extends AbstractLoggingActor {
 
     @Override

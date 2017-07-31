@@ -3,8 +3,6 @@ package io.github.zhzhxtrrk.akka.extension.spring.actor;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.springframework.context.annotation.Scope;
-
 import akka.actor.AbstractLoggingActor;
 import akka.japi.pf.ReceiveBuilder;
 import io.github.zhzhxtrrk.akka.extension.service.MessageService;
@@ -16,7 +14,6 @@ import io.github.zhzhxtrrk.akka.extension.service.MessageService;
  * @version MessageActor, v1.0 2017/7/27 8:56
  */
 @Named
-@Scope("prototype")
 public class MessageActor extends AbstractLoggingActor {
     private MessageService messageService;
 
